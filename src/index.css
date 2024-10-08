@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .default_btn {
+    @apply font-inter text-black-secondary bg-brightYellow focus:outline-none rounded-[4px] 
+           px-10 py-3 text-base md:px-5 md:py-3 md:text-[1.5vw] 
+           2xl:px-5 2xl:py-3 2xl:text-[1.2vw] lg:text-[1.46vw] 
+           font-medium text-center flex justify-center items-center w-fit 
+           shadow-lg shadow-brightYellow/30;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 166rem;
+}
+
+.nav-up {
+  top: -100%;
+}
+
+.hamburger .line {
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.hamburger.active .line:first-child {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.hamburger.active .line:last-child {
+  transform: translateY(-6px) rotate(45deg);
+}
+
+#hero {
+  height: calc(100vh - 5rem);
+  background-position-x: 55%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  #hero {
+    height: calc(100vh - 8rem);
+    background-position: center;
+  }
+}
